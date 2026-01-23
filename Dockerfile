@@ -8,8 +8,10 @@ USER root
 # postgresql-18-cron -> для pg_cron
 # postgresql-plpython3-18 -> для plpython3u
 # python3-pip -> для встановлення Python пакетів
+# libldap-2.5 -> системна бібліотека (пакет Debian: libldap-2.5-0)
 RUN apt-get update && \
     apt-get install -y \
+    libldap-2.5-0 \
     postgresql-18-cron \
     postgresql-plpython3-18 \
     python3-pip && \
@@ -22,5 +24,3 @@ RUN pip3 install --no-cache-dir --break-system-packages --ignore-installed -r /t
 
 # Обов'язково повертаємось до користувача postgres, як того вимагає CNPG
 USER postgres
-
-#
