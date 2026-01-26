@@ -1,5 +1,5 @@
 # Використовуємо поточний базовий образ
-FROM ghcr.io/cloudnative-pg/postgresql:18.1-202601050807-system-trixie
+FROM ghcr.io/cloudnative-pg/postgresql:18.1-system-trixie
 
 # Перемикаємось на root для встановлення пакетів
 USER root
@@ -8,10 +8,10 @@ USER root
 # postgresql-18-cron -> для pg_cron
 # postgresql-plpython3-18 -> для plpython3u
 # python3-pip -> для встановлення Python пакетів
-# libldap-2.5 -> системна бібліотека (пакет Debian: libldap-2.5-0)
+# libldap -> системна бібліотека (пакет Debian trixie: libldap2)
 RUN apt-get update && \
     apt-get install -y \
-    libldap-2.5-0 \
+    libldap2 \
     postgresql-18-cron \
     postgresql-plpython3-18 \
     python3-pip && \
