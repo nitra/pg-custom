@@ -11,7 +11,6 @@ USER root
 # libldap -> системна бібліотека (пакет Debian trixie: libldap2)
 RUN apt-get update && \
     apt-get install -y \
-    libldap2 \
     postgresql-18-cron \
     postgresql-plpython3-18 \
     python3-pip && \
