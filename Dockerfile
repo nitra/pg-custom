@@ -1,5 +1,5 @@
 # Використовуємо поточний базовий образ
-FROM ghcr.io/cloudnative-pg/postgresql:18.1-system-trixie
+FROM ghcr.io/cloudnative-pg/postgresql:18.3-202603230821-system-trixie
 
 # Перемикаємось на root для встановлення пакетів
 USER root
