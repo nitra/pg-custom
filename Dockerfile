@@ -23,3 +23,4 @@ RUN pip3 install --no-cache-dir --break-system-packages --ignore-installed -r /t
 
 # Обов'язково повертаємось до користувача postgres, як того вимагає CNPG
 USER postgres
+#
